@@ -11,9 +11,9 @@
           const convertToString = data.toString().cyan;
 
         console.log(convertToString)
-        
-      const reg = RegExp('http|https');
-      const foundhttp= convertToString.match(reg);
+
+      const reg = RegExp('http', 'g')
+      const foundhttp= convertToString.match(reg).length;
       console.log(foundhttp)
  
       }})
