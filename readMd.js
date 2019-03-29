@@ -10,10 +10,11 @@
       } {
           const convertToString = data.toString().cyan;
 
-        //   const foundLinksOnReadMe = convertToString.split("http").length-1;
-        //   console.log(foundLinksOnReadMe)
         console.log(convertToString)
-     
+        
+      const reg = RegExp('http|https');
+      const foundhttp= convertToString.match(reg);
+      console.log(foundhttp)
  
       }})
       
@@ -24,4 +25,8 @@
    console.log(readDir)
 
     
-    
+
+    //         const urlR = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm;
+//  const url= convertToString.match(urlR)
+        //   const foundLinksOnReadMe = convertToString.split("http").length-1;
+        //   console.log(foundLinksOnReadMe)
