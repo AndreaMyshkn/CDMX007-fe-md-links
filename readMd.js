@@ -1,30 +1,47 @@
    const fs = require('fs');
-   const file = ('./README.md')
-   const path = "./";
+  //  const file = ('./README.md')
+   const directory = "./";
+   const path = require('path');
 
 
+   //  fs.readdir(folder, (err, files) => {
+   //    files.forEach(file => {
+   //      console.log(file);
+   //    });
+   //  });
 
-   fs.readFile(file, (err, data) => {
-     if (err) {
-       console.log(err('ha ocurrido un error'))
-     } {
-       const convertToString = data.toString().cyan;
-       console.log(convertToString)
-       //Encuentra el número de coincidencias
-      //  const reg = RegExp('http', 'g');
-       const reg =  /\b(https?:\/\/.*?\.[a-z]{2,4}\b)/g;
-       const foundhttp = convertToString.match(reg);
-       console.log(foundhttp)
+   fs.readdir(directory, (err, data) => {
+         if (err) {
+           console.log(err('ha ocurrido un error'))
+         } {
+           data.forEach(file => {
+               if (path.extname(file) === '.md') {
 
-     }
-   })
+                 fs.readFile(file, (err, data) => {
+
+                  if(err){
+                    console.log(err('ha ocurrido un error'))
+                  }
+                     const convertToString = data.toString().cyan;
+                     console.log(convertToString)
+                  
+                     const reg = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+                  
+                      const foundhttp = convertToString.match(reg);
+                    const numberOfUrl = foundhttp.length;
+                      console.log(foundhttp)
+                      console.log(numberOfUrl)
+
+                   })
+                 }
+               })
+
+           }
+         })
 
 
-   //Leer todos los archivos del directorio
-   const readDir = fs.readdirSync(path);
+     
 
-   console.log(readDir)
 
-  
-   //   const foundLinksOnReadMe = convertToString.split("http").length-1;
-   //   console.log(foundLinksOnReadMe)
+       //   const foundLinksOnReadMe = convertToString.split("http").length-1;
+       //   console.log(foundLinksOnReadMe)

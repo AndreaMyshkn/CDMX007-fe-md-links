@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/AndreaMyshkn/CDMX007-fe-md-links#readme",
   "dependencies": {
-    "colors": "^1.3.3"
+    "colors": "^1.3.3",
+    "linkifyjs": "^2.1.8"
   }
 }
