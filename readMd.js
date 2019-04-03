@@ -2,13 +2,6 @@
    const directory = "./";
    const path = require('path');
 
-
-   //  fs.readdir(folder, (err, files) => {
-   //    files.forEach(file => {
-   //      console.log(file);
-   //    });
-   //  });
-
    fs.readdir(directory, (err, data) => {
      if (err) {
        console.log(err('ha ocurrido un error'))
@@ -21,15 +14,14 @@
              }
              const convertToString = data.toString().cyan;
              console.log(convertToString)
-             const reg = /(((https?:\/\/)|(www\.))[^\s]+)/g;
-             const foundhttp = convertToString.match(reg);
-             const numberOfUrl = foundhttp.length;
-             console.log(foundhttp)
+             const regExp = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+             const foundUrl = convertToString.match(regExp);
+             const numberOfUrl = foundUrl.length;
+             console.log(foundUrl)
              console.log(numberOfUrl)
            })
          }
        })
-
      }
    })
 
