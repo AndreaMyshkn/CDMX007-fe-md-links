@@ -21,10 +21,10 @@ const fs = require('fs');
              foundUrl.forEach(element=>{
               fetch(element)
               .then(response => {
-                if(response.status==200 && response.ok == true){
-                  console.log( `${element.cyan}`+ " "+ response.status +" " + "OK")
-                } else if (response.status==404 && response.ok==false){
-                  console.log( `${element.red}`+ " " + response.status  + " " + "Fail")
+                if(response.status==200 ){
+                  console.log( `${element.cyan}`+ " "+ response.status +" " + response.statusText)
+                } else if (response.status==404 ){
+                  console.log( `${element.red}`+ " " + response.status  + " " + response.statusText)
                 }
               })
             .catch(err => console.error(err));
