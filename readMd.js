@@ -1,8 +1,8 @@
-   const fs = require('fs');
+const fs = require('fs');
    const directory = "./";
    const path = require('path');
    const fetch = require('node-fetch')
-  const http = require('http');
+
 
   const readDirectory= ()=>{
    fs.readdir(directory, (err, data) => {
@@ -19,10 +19,18 @@
              const regExp = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g
              const foundUrl = convertToString.match(regExp);
              foundUrl.forEach(element=>{
-              fetch(element).then(response => console.log(response.status + ` ${element}`))
-              .catch(err => console.error(err));
+              fetch(element)
+              .then(response => {
+                if(response.status==200 && response.ok == true){
+                  console.log( `${element.cyan}`+ " "+ response.status +" " + "OK")
+                } else if (response.status==404 && response.ok==false){
+                  console.log( `${element.red}`+ " " + response.status  + " " + "Fail")
+                }
+              })
+            .catch(err => console.error(err));
+             
              })
-            
+             
            })
          }
        })
@@ -37,43 +45,3 @@
 
 
 module.exports.readDirectory= readDirectory();
-
-
-
-
-
-
-
-  //  foundUrl.forEach(element=>{
-  //   for (i in element) {
-  //     http.get(element[i], function(res) {
-  //         responses.push(res);
-  //         completed_requests++;
-  //         if (completed_requests == element.length) {
-  //             // All download done, process responses array
-  //             console.log(responses);
-  //         }
-  //     });
-  // }
-
-
-  //  })
-
-
- 
-   
-
-
-
-
-
-
-   //   const foundLinksOnReadMe = convertToString.split("http").length-1;
-   //   console.log(foundLinksOnReadMe)
-
-
-
-
-
-  
-    
