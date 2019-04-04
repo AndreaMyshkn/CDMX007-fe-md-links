@@ -19,6 +19,9 @@
   ],
   "author": "Andrea Velázquez Hidalgo",
   "license": "ISC",
+  "bin": {
+    "md-links": "./index.js"
+  },
   "bugs": {
     "url": "https://github.com/AndreaMyshkn/CDMX007-fe-md-links/issues"
   },
