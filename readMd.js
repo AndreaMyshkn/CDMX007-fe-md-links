@@ -4,15 +4,8 @@ const options = process.argv[3];
 const path = require('path');
 const links = require('./Links.js')
 
-
-
-  
-
-
 const readDirectoryToValidate = () => {
-
   fs.readdir(routeUser, (err, files) => {
-   
     if (err) {
       console.log(err('ha ocurrido un error'))
     } {
@@ -32,11 +25,8 @@ const readDirectoryToValidate = () => {
   })
 }
 
-
 const readDirectoryToStats = () => {
-
   fs.readdir(routeUser, (err, files) => {
-   
     if (err) {
       console.log(err('ha ocurrido un error'))
     } {
@@ -48,17 +38,15 @@ const readDirectoryToStats = () => {
             } else {
               links.foundLinksToStats(err, data)
             }
-
           })
         }
       })
     }
   })
 }
-const readDirectoryToValidateAndStats = () => {
 
+const readDirectoryToValidateAndStats = () => {
   fs.readdir(routeUser, (err, files) => {
-   
     if (err) {
       console.log(err('ha ocurrido un error'))
     } {
@@ -70,7 +58,6 @@ const readDirectoryToValidateAndStats = () => {
             } else {
               links.foundLinksToValidateAndStats(err, data)
             }
-
           })
         }
       })
@@ -83,15 +70,11 @@ const optionsFromUser = (options) =>{
     readDirectoryToValidate()
   } else if (options =='--stats'){
     readDirectoryToStats()
-  } else if (options=='--validate--stats'){
+  } else if (options=='--stats--validate'){
     readDirectoryToValidateAndStats()
   }
   }
-  
-
   optionsFromUser(options)
-
-
 
 module.exports.readDirectoryToValidate =readDirectoryToValidate;
 module.exports.readDirectoryToStats= readDirectoryToStats;
