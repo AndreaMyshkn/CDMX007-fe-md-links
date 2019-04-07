@@ -38,8 +38,8 @@ if (err){
 
 
     const object = {};
-    const result = [];
-    const resultUnique = [];
+    const repeatedLinks = [];
+    const uniqueLinks = [];
   
     arrayLinks.forEach(element => {
       if(!object[element])
@@ -49,18 +49,33 @@ if (err){
   
     for (const prop in object) {
        if(object[prop] >= 2) {
-           result.push(prop);
+           repeatedLinks.push(prop);
        }
        if (object[prop] = 1){
-          resultUnique.push(prop)
+           uniqueLinks.push(prop)
        }
     }
-  
-    console.log (`Cantidad de links repetidos:  ${result.length}`)
-    console.log (`Cantidad de links únicos : ${resultUnique.length}`)
+
+
+    console.log (`Cantidad de links repetidos:  ${repeatedLinks.length}`)
+    console.log (`Cantidad de links únicos : ${uniqueLinks.length}`)
     console.log (`Total de links:${arrayLinks.length}`)
+
+   
+
+ 
+   
+
+
+
+  
+    
   }
   
+
+
+
+
 }
 
 
