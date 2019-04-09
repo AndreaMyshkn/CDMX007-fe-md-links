@@ -5,7 +5,7 @@ const options = process.argv[3];
 const links = require('./Links.js');
 
 
-const readDirectory= () => {
+const readDirectory = () => {
   return new Promise((resolve, reject) => {
     fs.readdir(routeUser, (err, files) => {
       if (err) {
@@ -18,7 +18,6 @@ const readDirectory= () => {
                 reject(err('Falló la lectura'))
               } else {
                 resolve(data)
-
               }
             })
           }
