@@ -1,83 +1,50 @@
 const fs = require('fs');
+const path = require('path');
 const routeUser = process.argv[2];
 const options = process.argv[3];
-const path = require('path');
-const links = require('./Links.js')
+const links = require('./Links.js');
 
-const readDirectoryToValidate = () => {
-  fs.readdir(routeUser, (err, files) => {
-    if (err) {
-      console.log(err('ha ocurrido un error'))
-    } {
-      files.filter(file => {
-        if (path.extname(file) === '.md') {
-          fs.readFile(file, 'utf-8', (err, data) => {
-            if (err) {
-              console.log(err('ha ocurrido un error'))
-            } else {
-              links.foundLinksToValidate(err, data)
-            }
 
-          })
-        }
-      })
-    }
+const readDirectory= () => {
+  return new Promise((resolve, reject) => {
+    fs.readdir(routeUser, (err, files) => {
+      if (err) {
+        (err('Falló la lectura'))
+      } else {
+        files.filter(element => {
+          if (path.extname(element) === '.md') {
+            fs.readFile(element, 'utf-8', (err, data) => {
+              if (err) {
+                reject(err('Falló la lectura'))
+              } else {
+                resolve(data)
+
+              }
+            })
+          }
+        })
+      }
+    })
   })
 }
 
-const readDirectoryToStats = () => {
-  fs.readdir(routeUser, (err, files) => {
-    if (err) {
-      console.log(err('ha ocurrido un error'))
-    } {
-      files.filter(file => {
-        if (path.extname(file) === '.md') {
-          fs.readFile(file, 'utf-8', (err, data) => {
-            if (err) {
-              console.log(err('ha ocurrido un error'))
-            } else {
-              links.foundLinksToStats(err, data)
-            }
-          })
-        }
-      })
-    }
-  })
-}
-
-const readDirectoryToValidateAndStats = () => {
-  fs.readdir(routeUser, (err, files) => {
-    if (err) {
-      console.log(err('ha ocurrido un error'))
-    } {
-      files.filter(file => {
-        if (path.extname(file) === '.md') {
-          fs.readFile(file, 'utf-8', (err, data) => {
-            if (err) {
-              console.log(err('ha ocurrido un error'))
-            } else {
-              links.foundLinksToValidateAndStats(err, data)
-            }
-          })
-        }
-      })
-    }
-  })
-}
-
-const optionsFromUser = (options) =>{
-  if (options=='--validate'){
-    readDirectoryToValidate()
-  } else if (options =='--stats'){
-    readDirectoryToStats()
-  } else if (options=='--stats--validate'){
-    readDirectoryToValidateAndStats()
+const optionsFromUser = (options) => {
+  if (options === '--validate') {
+    (readDirectory())
+    .then(data => links.foundLinksToValidate(data))
+      .catch(err => console.log(err))
+  } else if (options === '--stats') {
+    (readDirectory())
+    .then(data => links.foundLinksToStats(data))
+      .catch(err => console.log(err))
+  } else if (options === '--stats--validate') {
+    (readDirectory())
+    .then(data => links.foundLinksToValidateAndStats(data))
+      .catch(err => console.log(err))
   }
-  }
-  optionsFromUser(options)
+}
 
-module.exports.readDirectoryToValidate =readDirectoryToValidate;
-module.exports.readDirectoryToStats= readDirectoryToStats;
-module.exports.readDirectoryToValidateAndStats= readDirectoryToValidateAndStats;
+optionsFromUser(options)
 
- 
+
+module.exports.readDirectory = readDirectory;

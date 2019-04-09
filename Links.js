@@ -1,34 +1,33 @@
 const searchOnDirectory = require('./readMd.js');
 const index = require('./index.js')
 const fetch = require('node-fetch');
-const validateLinks = require('./validateLinks.js')
 
 
-const foundLinksToValidate = (err, data) => {
-  if (err) {
-    console.log(err);
-  } else {
+const foundLinksToValidate = (data) => {
     const regExp = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g
     const foundUrl = data.match(regExp);
-    validateLinks.validate(foundUrl);
+    foundUrl.forEach(element => {
+      fetch(element)
+        .then(response => {
+          if (response.status != 404 ) {
+            console.log(element.cyan + " " + response.status + " " + response.statusText.green )
+          } else if (response.status == 404) {
+            console.log(element.red + " " + response.status + " " + response.statusText.red, )
+          }
+        })
+        .catch(err => console.error(err));
+    })
   }
-}
 
-const foundLinksToStats = (err, data) => {
 
-  if (err) {
-    console.log(err);
-  } else {
+const foundLinksToStats = ( data) => {
     const regExp2 = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g
     const numberOfLinks = data.match(regExp2).length;
     console.log(`El número de links encontrados es ${numberOfLinks}`)
   }
-}
 
-const foundLinksToValidateAndStats = (err, data) => {
-  if (err) {
-    console.log(err)
-  } else {
+
+const foundLinksToValidateAndStats = (data) => {
     const regExp3 = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g;
     const arrayLinks = data.match(regExp3)
     const object = {};
@@ -51,7 +50,7 @@ const foundLinksToValidateAndStats = (err, data) => {
     console.log(`Cantidad de links únicos : ${uniqueLinks.length}`)
     console.log(`Total de links:${arrayLinks.length}`)
   }
-}
+
 
 
 module.exports.foundLinksToValidate = foundLinksToValidate;
