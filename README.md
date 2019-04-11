@@ -9,22 +9,26 @@
 
 
 # Markdown Links
-##Pseudo código o diagrama de flujo 
+## Pseudo código o diagrama de flujo 
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
 
-##Board con el backlog para la implementación de la librería
+## Board con el backlog para la implementación de la librería
 
-Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior y gracias a las herramientas de planificación que ofrece github, es decir, gracias al Project presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y al milestones formado por una serie de issues respectivamente detallados.
+Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior y gracias al software de administración de proyectos con interfaz web "Trello", a las herramientas de planificación que ofrece github, es decir, gracias al Project presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y al milestones formado por una serie de issues respectivamente detallados.
 
-Backlog
+### Backlog:
 ![Backlog](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/Backlog.png)
 
+ ### Milestones
 
 
+![Milestones50%](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/Milestones%2050%25.jpg)
+![Milestones100%](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/milestones%20100%25.jpg)
 
+### Issues
 
-
-
+![IssuesClosed](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/blob/master/img/Issues.jpg)
+![IssuesOpen]()
 
 ## Preámbulo
 
