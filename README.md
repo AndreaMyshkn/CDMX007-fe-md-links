@@ -9,8 +9,11 @@
 
 
 # Markdown Links
-
+##Pseudo código o diagrama de flujo 
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
+
+##Board con el backlog para la implementación de la librería
+![Backlog]()
 
 
 
@@ -361,8 +364,8 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 
 ### `README.md`
 
-- [ ] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
-- [ ] Un board con el backlog para la implementación de la librería.
+- [x] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
+- [x] Un board con el backlog para la implementación de la librería.
 - [ ] Documentación técnica de la librería.
 - [ ] Guía de uso e instalación de la librería
 

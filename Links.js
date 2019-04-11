@@ -9,9 +9,9 @@ const foundLinksToValidate = (data) => {
   foundUrl.forEach(element => {
     fetch(element)
       .then(response => {
-        if (response.status != 404) {
+        if (response.status >= 200 && response.status < 400) {
           console.log(element.cyan + " " + response.status + " " + response.statusText.green)
-        } else if (response.status == 404) {
+        } else {
           console.log(element.red + " " + response.status + " " + response.statusText.red, )
         }
       })
@@ -49,6 +49,17 @@ const foundLinksToValidateAndStats = (data) => {
   const object = {};
   const repeatedLinks = [];
   const uniqueLinks = [];
+  arrayLinks.forEach(element=>{
+    const broken = [];
+    fetch(element)
+    .then(response =>{
+      if(response.status ==404){
+        broken.push(element)
+        console.log (`Links rotos:${element.red}`)
+      }
+    })
+  })
+
   arrayLinks.forEach(element => {
     if (!object[element])
       object[element] = 0;
@@ -62,19 +73,10 @@ const foundLinksToValidateAndStats = (data) => {
       uniqueLinks.push(prop)
     }
   }
-  arrayLinks.forEach(element=>{
-    const broken = [];
-    fetch(element)
-    .then(response =>{
-      if(response.status ==404){
-        broken.push(element)
-        console.log (broken.length)
-      }
-    })
-  })
 
-  console.log(`Cantidad de links repetidos: ${repeatedLinks.length}`)
-  console.log(`Cantidad de links únicos: ${uniqueLinks.length}`)
+
+  console.log(`Links repetidos: ${repeatedLinks.length}`)
+  console.log(`Links únicos: ${uniqueLinks.length}`)
   console.log(`Total de links:${arrayLinks.length}`)
  
 }
