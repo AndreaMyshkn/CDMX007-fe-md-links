@@ -23,43 +23,38 @@ const foundLinksToValidate = (data) => {
 const foundLinksToStats = (data) => {
   const regExp2 = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g
   const linksToStats = data.match(regExp2)
-  const numberOfLinks = linksToStats.length;
- const obj = [];
+  const obj = {};
   const unique = [];
-  linksToStats.forEach(element =>{
-     if(!obj[element])
-     obj[element] = 0;
-     obj[element] += 1;
-  }) 
-  for (const prop in obj){
+  linksToStats.forEach(element => {
+    if (!obj[element])
+      obj[element] = 0;
+    obj[element] += 1;
+  })
+  for (let prop in obj) {
     if (obj[prop] = 1) {
       unique.push(prop)
     }
   }
-  console.log (`El número de links únicos es ${unique.length}`)
-  console.log(`El número de links encontrados es ${numberOfLinks}`)
-  
-
+  console.log(`El número de links únicos es ${unique.length}`)
+  console.log(`El número de links encontrados es ${linksToStats.length}`)
 }
-
 
 const foundLinksToValidateAndStats = (data) => {
   const regExp3 = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g;
   const arrayLinks = data.match(regExp3)
+  arrayLinks.forEach(element => {
+    const broken = [];
+    fetch(element)
+      .then(response => {
+        if (response.status == 404) {
+          broken.push(element)
+          console.log(`Links rotos:${broken.length}`)
+        }
+      })
+  })
   const object = {};
   const repeatedLinks = [];
   const uniqueLinks = [];
-  arrayLinks.forEach(element=>{
-    const broken = [];
-    fetch(element)
-    .then(response =>{
-      if(response.status ==404){
-        broken.push(element)
-        console.log (`Links rotos:${element.red}`)
-      }
-    })
-  })
-
   arrayLinks.forEach(element => {
     if (!object[element])
       object[element] = 0;
@@ -73,16 +68,11 @@ const foundLinksToValidateAndStats = (data) => {
       uniqueLinks.push(prop)
     }
   }
-
-
   console.log(`Links repetidos: ${repeatedLinks.length}`)
   console.log(`Links únicos: ${uniqueLinks.length}`)
   console.log(`Total de links:${arrayLinks.length}`)
- 
 }
-
 
 module.exports.foundLinksToValidate = foundLinksToValidate;
 module.exports.foundLinksToStats = foundLinksToStats;
 module.exports.foundLinksToValidateAndStats = foundLinksToValidateAndStats;
-
