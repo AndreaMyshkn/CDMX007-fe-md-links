@@ -23,7 +23,7 @@ Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo ant
 
 ![Trello](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/trello2.jpg)
 
-## Preámbulo
+## DOCUMENTACIÓN TÉCNICA DE LA LIBRERÍA
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
 ligero muy popular entre developers. Es usado en muchísimas plataformas que
@@ -204,93 +204,33 @@ que hay dentro del link (truncado a 50 caracteres).
 
 ##### `--validate`
 
-Si pasamos la opción `--validate`, el módulo debe hacer una petición HTTP para
+Si pasamos la opción `--validate`, el módulo hace una petición HTTP para
 averiguar si el link funciona o no. Si el link resulta en una redirección a una
 URL que responde ok, entonces consideraremos el link como ok.
 
-Por ejemplo:
 
-```sh
-$ md-links ./some/example.md --validate
-./some/example.md http://algo.com/2/3/ ok 200 Link a algo
-./some/example.md http://google.com/ ok 301 Google
-```
+![validate](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/validate.jpg)
 
-Vemos que el _output_ en este caso incluye la palabra `ok` o `fail` después de
+Vemos que el _output_ en este caso incluye la palabra `ok` o `Not found` después de
 la URL, así como el status de la respuesta recibida a la petición HTTP a dicha
 URL.
 
 ##### `--stats`
 
-Si pasamos la opción `--stats` el output (salida) será un texto con estadísticas
+Si pasamos la opción `--stats` el output (salida) es un texto con estadísticas
 básicas sobre los links.
 
-```sh
-$ md-links ./some/example.md --stats
-Total: 3
-Unique: 3
-```
+![stats](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/stats.jpg)
 
+
+##### `--stats--validate`
 También podemos combinar `--stats` y `--validate` para obtener estadísticas que
 necesiten de los resultados de la validación.
 
-```sh
-$ md-links ./some/example.md --stats --validate
-Total: 3
-Unique: 3
-Broken: 1
-```
+![statsvalidate](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/--stats--validate.jpg)
 
-## Entregables
 
-Módulo instalable via `npm install <github-user>/md-links`. Este módulo debe
-incluir tanto un ejecutable como una interfaz que podamos importar con `require`
-para usarlo programáticamente.
 
-## Hacker edition
-
-- Puedes agregar la propiedad `line` a cada objeto `link` indicando en qué línea
-  del archivo se encontró el link.
-- Puedes agregar más estadísticas.
-- Integración continua con Travis o Circle CI.
-
-## Evaluación
-
-### Tech
-
-| Habilidad              |
-| ---------------------- |
-| **JavaScript**         |
-| Estilo                 |
-| Nomenclatura/semántica |
-| Funciones/modularidad  |
-| Estructuras de datos   |
-| Tests                  |
-| **SCM**                |
-| Git                    |
-| GitHub                 |
-| **CS**                 |
-| Lógica                 |
-| Arquitectura           |
-
-### Habilidades Blandas
-
-| Habilidad                                                  |
-| ---------------------------------------------------------- |
-| Planificación y organización                               |
-| Autoaprendizaje                                            |
-| Solución de Problemas                                      |
-| Dar y recibir feedback                                     |
-| Adaptabilidad                                              |
-| Trabajo en equipo (trabajo colaborativo y responsabilidad) |
-| Comunicación eficaz                                        |
-| Presentaciones                                             |
-
-Recuerda revisar la rúbrica y de acuerdo a tus alcances en proyectos anteriores busca tu crecimiento personal.
-
-## Pistas / Tips
-
-### FAQs
 
 #### ¿Cómo hago para que mi módulo sea _instalable_ desde GitHub?
 
