@@ -14,7 +14,7 @@
 
 ## Board con el backlog para la implementación de la librería
 
-Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior y gracias al software de administración de proyectos con interfaz web "Trello" y a las herramientas de planificación que ofrece github, i.e. el Project presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y el [presente milestones](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/milestones)formado por una serie de issues respectivamente detallados.
+Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior y gracias al software de administración de proyectos con interfaz web "Trello" y a las herramientas de planificación que ofrece github, i.e. el Project presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y el  [presente milestones](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/milestones)formado por una serie de issues respectivamente detallados.
 
 ### Backlog
 ![Backlog](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/Backlog.png)
