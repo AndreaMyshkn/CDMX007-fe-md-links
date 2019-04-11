@@ -1,7 +1,7 @@
 
 # Markdown Links
 
-## GUÍA DE USO O INSTALACIÓN DE LA LIBRERÍA
+## Instalación de la librería
 
 
 ```sh
