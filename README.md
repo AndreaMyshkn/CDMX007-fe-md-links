@@ -1,5 +1,11 @@
 
 # Markdown Links
+
+## GUÍA DE USO O INSTALACIÓN DE LA LIBRERÍA
+
+Módulo instalable vía npm install myshkn-md-links.
+
+
 ## Pseudo código o diagrama de flujo 
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
 
@@ -146,10 +152,6 @@ necesiten de los resultados de la validación.
 ![statsvalidate](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/--stats--validate.jpg)
 
 
-## GUÍA DE USO O INSTALACIÓN DE LA LIBRERÍA
-
-
-Módulo instalable vía npm install myshkn-md-links.
 
 
 
