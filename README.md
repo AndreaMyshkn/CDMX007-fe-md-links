@@ -3,7 +3,10 @@
 
 ## GUÍA DE USO O INSTALACIÓN DE LA LIBRERÍA
 
+
+```sh
 Módulo instalable vía npm install myshkn-md-links.
+```
 
 
 ## Pseudo código o diagrama de flujo 
