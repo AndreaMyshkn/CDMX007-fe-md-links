@@ -40,6 +40,8 @@ const optionsFromUser = (options) => {
     (readDirectory())
     .then(data => links.foundLinksToValidateAndStats(data))
       .catch(err => console.log(err))
+  }else{
+    console.log ('Por favor, introduce una ruta y opción')
   }
 }
 
