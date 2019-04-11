@@ -16,16 +16,22 @@ Módulo instalable vía npm install myshkn-md-links.
 
 Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior, gracias al software de administración de proyectos con interfaz web "Trello" y a las herramientas de planificación que ofrece github, i.e. el Project presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y el  [milestones](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/milestones)formado por una serie de issues respectivamente detallados.
 
-### Backlog
+```sh 
+Backlog
+```
 ![Backlog](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/Backlog.png)
-### Milestones
+```sh
+Milestones
+```
 ![Milestones100%](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/milestones.jpg)
-
-### Issues
+```sh
+Issues
+```
 ![IssuesClosed](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/IssuesClosed.jpg)
 ![IssuesOpen](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/IssuesOpen.jpg)
-
-### Trello 
+```sh
+Trello
+```
 ![Trello](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/trello2.jpg)
 
 ## DOCUMENTACIÓN TÉCNICA DE LA LIBRERÍA
