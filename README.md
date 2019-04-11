@@ -1,13 +1,4 @@
 
-
-
-
-
-
-
-
-
-
 # Markdown Links
 ## Pseudo código o diagrama de flujo 
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
@@ -21,7 +12,7 @@ Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo ant
 
 ### Milestones
 
-![Milestones100%](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/milestones%20100%25.jpg)
+![Milestones100%](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/milestones.jpg)
 
 ### Issues
 
@@ -30,7 +21,7 @@ Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo ant
 
 ### Trello 
 
-![Trello]()
+![Trello](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/trello2.jpg)
 
 ## Preámbulo
 
@@ -372,34 +363,34 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 
 ### General
 
-- [ ] Puede instalarse via `npm install --global <github-user>/md-links`
+- [ ] Puede instalarse vía `npm install --global <github-user>/md-links`
 
 ### `README.md`
 
 - [x] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
 - [x] Un board con el backlog para la implementación de la librería.
-- [ ] Documentación técnica de la librería.
+- [x] Documentación técnica de la librería.
 - [ ] Guía de uso e instalación de la librería
 
 ### API `mdLinks(path, opts)`
 
-- [ ] El módulo exporta una función con la interfaz (API) esperada.
-- [ ] Implementa soporte para archivo individual
-- [ ] Implementa soporte para directorios
-- [ ] Implementa `options.validate`
+- [x] El módulo exporta una función con la interfaz (API) esperada.
+- [x] Implementa soporte para archivo individual
+- [x] Implementa soporte para directorios
+- [x] Implementa `options.validate`
 
 ### Pruebas / tests
 
 - [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions,
       lines, y branches.
-- [ ] Pasa tests (y linters) (`npm test`).
+- [x] Pasa tests (y linters) (`npm test`).
 
 ### CLI
 
-- [ ] Expone ejecutable `md-links` en el path (configurado en `package.json`)
-- [ ] Se ejecuta sin errores / output esperado
-- [ ] Implementa `--validate`
-- [ ] Implementa `--stats`
+- [x] Expone ejecutable `md-links` en el path (configurado en `package.json`)
+- [x] Se ejecuta sin errores / output esperado
+- [x] Implementa `--validate`
+- [x] Implementa `--stats`
 
 ## Hacker Edition
 
