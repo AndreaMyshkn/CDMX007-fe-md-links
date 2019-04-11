@@ -13,7 +13,13 @@
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
 
 ##Board con el backlog para la implementación de la librería
-![Backlog]()
+
+Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior y gracias a las herramientas de planificación que ofrece github, es decir, gracias al Project presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y al milestones formado por una serie de issues respectivamente detallados.
+
+Backlog
+![Backlog](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/Backlog.png)
+
+
 
 
 
