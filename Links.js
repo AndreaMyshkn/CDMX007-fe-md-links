@@ -1,5 +1,5 @@
 const searchOnDirectory = require('./readMd.js');
-const index = require('./index.js')
+const index = require('./index.js');
 const fetch = require('node-fetch');
 
 
@@ -30,7 +30,7 @@ const foundLinksToStats = (data) => {
       obj[element] = 0;
     obj[element] += 1;
   })
-  for (let prop in obj) {
+  for (const prop in obj) {
     if (obj[prop] = 1) {
       unique.push(prop)
     }
@@ -60,7 +60,7 @@ const foundLinksToValidateAndStats = (data) => {
       object[element] = 0;
     object[element] += 1;
   })
-  for (let prop in object) {
+  for (const prop in object) {
     if (object[prop] >= 2) {
       repeatedLinks.push(prop);
     }

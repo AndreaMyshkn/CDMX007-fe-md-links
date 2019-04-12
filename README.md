@@ -3,18 +3,17 @@
 
 ## Instalación de la librería
 
-
 ```sh
 Módulo instalable vía npm install myshkn-md-links.
 ```
-
+Autor de la librería: Andrea Velázquez Hidalgo.
 
 ## Pseudo código o diagrama de flujo 
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
 
 ## Board con el backlog para la implementación de la librería
 
-Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior, gracias al software de administración de proyectos con interfaz web "Trello" y a las herramientas de planificación que ofrece github, i.e. el Project presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y el  [milestones](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/milestones)formado por una serie de issues respectivamente detallados.
+Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior, gracias al software de administración de proyectos con interfaz web "Trello" y a las herramientas de planificación que ofrece github, i.e. el "project" presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y este [milestones] (https://github.com/AndreaMyshkn/CDMX007-fe-md-links/milestones).
 
 ```sh 
 Backlog
@@ -46,45 +45,16 @@ Estos archivos `Markdown` normalmente contienen _links_ (vínculos/ligas) que
 muchas veces están rotos o ya no son válidos y eso perjudica mucho el valor de
 la información que se quiere compartir.
 
-Dentro de una comunidad de código abierto, nos han propuesto crear una
-herramienta usando [Node.js](https://nodejs.org/), que lea y analice archivos
-en formato `Markdown`, para verificar los links que contengan y reportar
+Dentro de una comunidad de código abierto, se ha creado una herramienta usando 
+[Node.js](https://nodejs.org/), que lee y analiza archivos
+en formato `Markdown`, para verificar los links que contienen y reportar
 algunas estadísticas.
-
-![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
-
-## Introducción
-
-[Node.js](https://nodejs.org/es/) es un entorno de ejecución para JavaScript
-construido con el [motor de JavaScript V8 de Chrome](https://developers.google.com/v8/).
-Esto nos va a permitir ejecutar JavaScript en el entorno del sistema operativo,
-ya sea tu máquina o un servidor, lo cual nos abre las puertas para poder
-interactuar con el sistema en sí, archivos, redes, ...
-
-En este proyecto nos alejamos un poco del navegador para construir un programa
-que se ejecute usando Node.js, donde aprenderemos sobre cómo interactuar con el
-sistema archivos, con el entorno (_process_, _env_, _stdin/stdout/stderr_), ...
-
-
-Tópicos:
-
-- [Node.js](https://nodejs.org/en/).
-- [módulos (CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html).
-- [file system](https://nodejs.org/api/fs.html).
-- [path](https://nodejs.org/api/path.html).
-- [http.get](https://nodejs.org/api/http.html#http_http_get_options_callback).
-- [Parsing](https://en.wikipedia.org/wiki/Parsing).
-- [markdown](https://daringfireball.net/projects/markdown/syntax).
-- [CLI](https://www.proyectobyte.com/windows/simbolo-del-sistema/uso-la-interfaz-linea-comandos).
-- [npm-scripts](https://docs.npmjs.com/misc/scripts).
-- [semver](https://semver.org/).
 
 
 ### Archivos del proyecto
 
 - `README.md` con descripción del módulo, instrucciones de instalación/uso,
-  documentación del API y ejemplos. Todo lo relevante para que cualquier
-  developer que quiera usar tu librería pueda hacerlo sin inconvenientes.
+  documentación del API y ejemplos. 
 - `index.js`: Desde este archivo se exporta una función (`mdLinks`).
 - `package.json` con nombre, versión, descripción, autores, licencia,
   dependencias, scripts (pretest, test, ...)
@@ -92,7 +62,7 @@ Tópicos:
 - `.eslintrc` con configuración para linter.
 - `.gitignore` para ignorar `node_modules` u otras carpetas que no deban
   incluirse en control de versiones (`git`).
-- `test/md-links.spec.js` debe contener los tests unitarios para la función
+- `test/md-links.spec.js` con los tests unitarios para la función
   `mdLinks()`. Tu implementación debe pasar estos test.
 
 ### JavaScript API
@@ -112,7 +82,7 @@ siguiente interfaz:
 ##### Valor de retorno
 
 La función retorna una promesa (`Promise`) que resuelve un arreglo
-(`Array`) de objetos (`Object`), donde cada objeto representa un link
+(`Array`) de objetos (`Object`), donde cada objeto representa un link.
 
 
 ### CLI (Command Line Interface - Interfaz de Línea de Comando)
@@ -161,37 +131,6 @@ necesiten de los resultados de la validación.
 ![statsvalidate](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/--stats--validate.jpg)
 
 
-
-
-
-
-### Tutoriales / NodeSchool workshoppers
-
-- [learnyounode](https://github.com/workshopper/learnyounode)
-- [how-to-npm](https://github.com/workshopper/how-to-npm)
-- [promise-it-wont-hurt](https://github.com/stevekane/promise-it-wont-hurt)
-
-### Otros recursos
-
-- [Acerca de Node.js - Documentación oficial](https://nodejs.org/es/about/)
-- [Node.js file system - Documentación oficial](https://nodejs.org/api/fs.html)
-- [Node.js http.get - Documentación oficial](https://nodejs.org/api/http.html#http_http_get_options_callback)
-- [Node.js - Wikipedia](https://es.wikipedia.org/wiki/Node.js)
-- [What exactly is Node.js? - freeCodeCamp](https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5)
-- [¿Qué es Node.js y para qué sirve? - drauta.com](https://www.drauta.com/que-es-nodejs-y-para-que-sirve)
-- [¿Qué es Nodejs? Javascript en el Servidor - Fazt en YouTube](https://www.youtube.com/watch?v=WgSc1nv_4Gw)
-- [¿Simplemente qué es Node.js? - IBM Developer Works, 2011](https://www.ibm.com/developerworks/ssa/opensource/library/os-nodejs/index.html)
-- [Node.js y npm](https://www.genbeta.com/desarrollo/node-js-y-npm)
-- [Módulos, librerías, paquetes, frameworks... ¿cuál es la diferencia?](http://community.laboratoria.la/t/modulos-librerias-paquetes-frameworks-cual-es-la-diferencia/175)
-- [Asíncronía en js](https://carlosazaustre.com/manejando-la-asincronia-en-javascript/)
-- [NPM](https://docs.npmjs.com/getting-started/what-is-npm)
-- [Publicar packpage](https://docs.npmjs.com/getting-started/publishing-npm-packages)
-- [Crear módulos en Node.js](https://docs.npmjs.com/getting-started/publishing-npm-packages)
-- [Leer un archivo](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)
-- [Leer un directorio](https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback)
-- [Path](https://nodejs.org/api/path.html)
-- [Linea de comando CLI](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
-
 ## Checklist
 
 ### General
@@ -225,11 +164,5 @@ necesiten de los resultados de la validación.
 - [x] Implementa `--validate`
 - [x] Implementa `--stats`
 
-## Hacker Edition
-
-- [ ] Crear un script en el package.json que transforme el codigo ES6+ a ES5.
-- [ ] Puedes agregar la propiedad line a cada objeto link indicando en qué línea del archivo se encontró el link.
-- [ ] Puedes agregar más estadísticas.
-- [ ] Integración continua con Travis o Circle CI.
 
 
