@@ -6,7 +6,7 @@
 ```sh
 Módulo instalable vía npm install myshkn-md-links.
 ```
-Autor de la librería: Andrea Velázquez Hidalgo.
+Autor: Andrea Velázquez Hidalgo.
 
 ## Pseudo código o diagrama de flujo 
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
@@ -87,7 +87,7 @@ La función retorna una promesa (`Promise`) que resuelve un arreglo
 
 ### CLI (Command Line Interface - Interfaz de Línea de Comando)
 
-El ejecutable de nuestra aplicación debe poder ejecutarse de la siguiente
+El ejecutable de nuestra aplicación se ejecuta de la siguiente
 manera a través de la terminal:
 
 `md-links <path-to-file> [options]`
@@ -95,7 +95,7 @@ manera a través de la terminal:
 Por ejemplo:
 
 ```sh
-$ md-links ./some/example.md
+$ md-links ./some/example.md --validate
 ./some/example.md http://algo.com/2/3/ Link a algo
 ./some/example.md http://google.com/ Google
 ```
