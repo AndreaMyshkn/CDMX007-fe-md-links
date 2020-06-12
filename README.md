@@ -11,27 +11,6 @@ Autor: Andrea Velázquez Hidalgo.
 ## Pseudo código o diagrama de flujo 
 ![Diagrama](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/MD-LINKS%20DIAGRAMA.jpeg)
 
-## Board con el backlog para la implementación de la librería
-
-Esta librería fue desarrollada en base al pseudocódigo o diagrama de flujo anterior, gracias al software de administración de proyectos con interfaz web "Trello" y a las herramientas de planificación que ofrece github, i.e. el "project" presente en  esta liga [Project-MdLinks Andrea](https://github.com/AndreaMyshkn/CDMX007-fe-md-links/projects/1) y este [milestones] (https://github.com/AndreaMyshkn/CDMX007-fe-md-links/milestones).
-
-```sh 
-Backlog
-```
-![Backlog](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/Backlog.png)
-```sh
-Milestones
-```
-![Milestones100%](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/milestones.jpg)
-```sh
-Issues
-```
-![IssuesClosed](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/IssuesClosed.jpg)
-![IssuesOpen](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/IssuesOpen.jpg)
-```sh
-Trello
-```
-![Trello](https://raw.githubusercontent.com/AndreaMyshkn/CDMX007-fe-md-links/master/img/trello2.jpg)
 
 ## DOCUMENTACIÓN TÉCNICA DE LA LIBRERÍA
 
